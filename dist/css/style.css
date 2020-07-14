@@ -1,0 +1,110 @@
+body {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.showcase::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/microphone.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar .brand {
+  font-size: 2.2rem;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.navbar .links a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 1rem;
+}
+
+.navbar .links a:hover {
+  color: gold;
+}
+
+.text {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.text .title {
+  font-size: 5rem;
+}
+
+.text .subtitle {
+  font-size: 3rem;
+}
+
+.main section {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 1rem;
+}
+
+.main section:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+.main section .section-header {
+  font-size: 3rem;
+}
+
+.main section .section-subtitle {
+  font-size: 2rem;
+  color: #333333;
+}
+
+.main section .section-container {
+  margin: 3rem 10rem;
+}
+
+.main .pricing .pricing-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main .pricing .pricing-list .pricing-list-item {
+  margin: 2rem;
+}
+
+.main .pricing .pricing-list-item h1 {
+  color: purple;
+  font-size: 2.5rem;
+}
+
+.main .pricing .pricing-list-item p {
+  color: #333333;
+  font-size: 1.5rem;
+}
