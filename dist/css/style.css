@@ -95,6 +95,8 @@ body {
 .main-action a {
   color: gold;
   text-decoration: none;
+  font-size: 1.25rem;
+  margin: auto;
   transition: 0.2s;
 }
 
@@ -102,6 +104,29 @@ body {
   color: goldenrod;
 }
 
+.main-action a i {
+  position: relative;
+  top: 0.1rem;
+  left: 0.5rem;
+}
+
+.main-action a:hover i {
+  animation-name: bounce;
+  animation-duration: 1.75s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
 .main {
   background-color: #ffffff;
 }
@@ -129,6 +154,7 @@ body {
 
 .main section .section-container {
   margin: 3rem 10rem;
+  margin-bottom: 0;
 }
 
 .main .pricing .pricing-list {
@@ -190,8 +216,50 @@ body {
   padding: 1rem;
   border-radius: 4px;
   box-shadow: 0 2px 10px #dddddd;
+  text-align: left;
+  max-width: 250px;
 }
 
 .main .workflow .card h3 {
   color: purple;
+}
+
+.main .workflow .card i {
+  color: gold;
+}
+
+.main .features .features-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; 
+}
+
+.feature:nth-child(1) {
+  grid-template-columns: 1 / 2;
+  grid-template-rows: 1 / 2;
+}
+
+.feature:nth-child(2) {
+  grid-template-columns: 2 / 3;
+  grid-template-rows: 1 / 2;
+}
+
+.feature:nth-child(3) {
+  grid-template-columns: 3 / 4;
+  grid-template-rows: 1 / 2;
+}
+
+.feature:nth-child(4) {
+  grid-template-columns: 1 / 2;
+  grid-template-rows: 2 / 3;
+}
+
+.feature:nth-child(5) {
+  grid-template-columns: 2 / 3;
+  grid-template-rows: 2 / 3;
+}
+
+.feature:nth-child(6) {
+  grid-template-columns: 3 / 4;
+  grid-template-rows: 2 / 3;
 }
