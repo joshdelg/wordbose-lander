@@ -14,8 +14,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
 
 .content {
@@ -128,7 +128,8 @@ body {
   }
 }
 .main {
-  background-color: #ffffff;
+  background-color: #fdfdfd;
+  max-width: 1920;
 }
 
 .main hr {
@@ -137,10 +138,13 @@ body {
 }
 
 .main section {
-  background-color: #ffffff;
   color: #000000;
   text-align: center;
   padding: 1rem;
+}
+
+.main section:nth-of-type(even) {
+  background-color: #f4f4f4;
 }
 
 .main section .section-header {
@@ -198,6 +202,7 @@ body {
   background-color: #eeeeee;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   margin: 3rem;
   border-radius: 4px;
 }
@@ -210,6 +215,10 @@ body {
   grid-column: 1 / 2;
 }
 
+.card-container i {
+  color: #aaaaaa;
+}
+
 .main .workflow .card {
   background-color: #ffffff;
   margin: 1rem;
@@ -217,15 +226,19 @@ body {
   border-radius: 4px;
   box-shadow: 0 2px 10px #dddddd;
   text-align: left;
-  max-width: 250px;
+  flex: 1;
 }
 
 .main .workflow .card h3 {
-  color: purple;
+  color: #000000;
 }
 
 .main .workflow .card i {
   color: gold;
+}
+
+.workflow .card p {
+  color: #333333;
 }
 
 .main .features .features-container {
@@ -262,4 +275,141 @@ body {
 .feature:nth-child(6) {
   grid-template-columns: 3 / 4;
   grid-template-rows: 2 / 3;
+}
+
+.feature {
+  text-align: left;
+  margin: 2rem;
+}
+
+.feature i {
+  color: gold;
+}
+
+.feature h3 {
+  color: #000000;
+}
+
+.feature p {
+  color: #333333;
+}
+
+.sample {
+  margin-bottom: 3rem;
+}
+
+/*.sample .section-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.sample .sample-left {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  margin: auto;
+}
+
+.sample img {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  width: 100%;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px #aaaaaa;
+}*/
+
+.main section.sample {
+  background-color: #2F014D;
+  color: #f4f4f4;
+}
+
+.sample .section-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.sample .section-container .left {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  text-align: left;
+  padding-right: 2rem;
+}
+
+.sample .left .section-subtitle {
+  font-size: 1.5rem;
+  color: #aaaaaa;
+}
+
+.sample .left .action {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: gold;
+  padding: 1.5rem 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.action i {
+  margin-left: 0.25rem;
+}
+
+.sample .left .action:hover {
+  color: goldenrod;
+}
+
+.sample .left .action:hover i {
+  margin-left: 0.5rem;
+}
+
+.section-container img {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  width: 100%;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 6px 6px 6px #000000;
+}
+
+section.uses {
+  background-color: purple;
+  color: #ffffff;
+}
+
+.scroller-heading {
+  font-size: 2.25rem;
+}
+
+.scroller {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroller .use {
+  margin: 0.5rem 2rem;
+  font-size: 2rem;
+  min-width: 200px;
+}
+
+.scroller a {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+}
+
+.scroller a:hover {
+  background-color: #eeeeee;
+  border-radius: 100%;
+}
+
+.scroller i {
+  position: relative;
+  top: 15px;
+}
+
+.use-showcase {
+  background-color: purple;
 }
