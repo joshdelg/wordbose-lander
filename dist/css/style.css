@@ -171,13 +171,46 @@ body {
 }
 
 .main .pricing .pricing-list-item h1 {
-  color: purple;
-  font-size: 2.5rem;
+  color: #000000;
+  font-size: 2rem;
 }
 
 .main .pricing .pricing-list-item p {
   color: #333333;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.pricing .pricing-card {
+  background-color: #ffffff;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+  box-shadow: 4px 4px 8px #dddddd;
+  border-radius: 6px;
+  transition: all 0.25s;
+}
+
+.pricing .pricing-card:hover {
+  transform: scale(1.05);
+}
+
+.pricing .pricing-card .comparison {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.pricing-card .comparison h1 {
+  color: gold;
+}
+
+.pricing-card .comparison div {
+  flex: 1;
+}
+
+.pricing-card .comparison div:first-child {
+  border-right: 3px solid #eeeeee;
 }
 
 .main .workflow .row-container {
@@ -227,6 +260,11 @@ body {
   box-shadow: 0 2px 10px #dddddd;
   text-align: left;
   flex: 1;
+  transition: all ease-in-out 0.15s;
+}
+
+.main .workflow .card:hover {
+  transform: scale(1.1);
 }
 
 .main .workflow .card h3 {
@@ -294,31 +332,6 @@ body {
   color: #333333;
 }
 
-.sample {
-  margin-bottom: 3rem;
-}
-
-/*.sample .section-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-}
-
-.sample .sample-left {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  margin: auto;
-}
-
-.sample img {
-  grid-row: 1 / 2;
-  grid-column: 2 / 3;
-  width: 100%;
-  margin: auto;
-  border-radius: 12px;
-  box-shadow: 6px 6px 12px #aaaaaa;
-}*/
-
 .main section.sample {
   background-color: #2F014D;
   color: #f4f4f4;
@@ -327,17 +340,24 @@ body {
 .sample .section-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 5rem;
+  grid-row-gap: 5rem;
 }
 
 .sample .section-container .left {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   text-align: left;
-  padding-right: 2rem;
 }
 
-.sample .left .section-subtitle {
+.sample .section-container .right {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: left;
+}
+
+.sample .left .section-subtitle, .sample .right .section-subtitle {
   font-size: 1.5rem;
   color: #aaaaaa;
 }
@@ -365,6 +385,15 @@ body {
 .section-container img {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  width: 100%;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 6px 6px 6px #000000;
+}
+
+.section-container img.col2-img {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
   width: 100%;
   margin: auto;
   border-radius: 8px;
